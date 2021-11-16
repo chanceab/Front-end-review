@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    padding:0;
+    background:#fafafa;
+
+    height: 100%;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.box {
+    box-sizing:border-box;
+
+    line-height:48px;
+    text-align:center;
+    font-size:16px;
+    border: 1px solid lightblue;
+
+    width:200px;
+    height:200px;
+    background: #eddd9e;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-100px;
+    margin-left:-100px;
+}

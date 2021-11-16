@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding:0;
+    background:#fafafa;
+    width: 100%;
+    /*position: relative;*/
+
+    overflow: hidden;
+}
+
+.box {
+    text-align:center;
+    font-size:16px;
+    width:200px;
+    height:200px;
+    background: #eddd9e;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
