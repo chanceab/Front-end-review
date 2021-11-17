@@ -1,14 +1,14 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
-    border: red solid 10px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border: red solid 10px;
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: #eddd9e;
+  width: 100px;
+  height: 100px;
+  background-color: #eddd9e;
 }
