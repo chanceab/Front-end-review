@@ -21,7 +21,7 @@
   <!--  <link rel="stylesheet" href="./Table-Cell.css">-->
 
   <!--  display: grid 兼容性不高 需改变代码结构, 不详写-->
-  <link rel="stylesheet" href="./Grid.css">
+<!--  <link rel="stylesheet" href="./Grid.css">-->
 
 
 </head>
@@ -39,7 +39,7 @@
 <!--</style>-->
 
 <body>
-  <div class="box"></div>
+<!--  <div class="box"></div>-->
 
   <!-- js 实现居中-->
   <!-- <script>-->
@@ -55,6 +55,43 @@
   <!--   box.style.top=(winH-boxH)/2+'px';-->
   <!--   box.style.backgroundColor="red";-->
   <!-- </script>-->
+
+  <div class="container">
+    <div class="box">
+
+    </div>
+  </div>
+
+  <style>
+      .container {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.5);
+          text-align: center;
+          font-size: 0;
+          white-space: nowrap;
+          overflow: auto;
+      }
+
+      .container::after {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+      }
+
+      .box {
+          display: inline-block;
+          width: 500px;
+          height: 400px;
+          background-color: pink;
+          white-space: normal;
+          vertical-align: middle;
+      }
+  </style>
 </body>
 
 </html>

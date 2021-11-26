@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" placeholder="输入并搜索" class="search">
+</body>
+
+<script>
+  const search = document.querySelector(".search");
+
+  function searchInput() {
+    console.log("@@@");
+  }
+  search.addEventListener("input", throttle(searchInput))
+
+
+  function throttle(fn, delay = 200, immediate = false) {
+    let preTime = Date.now();
+    const _this = this
+
+    return function (_this, ...arg) {
+      let nowTime = Date.now();
+
+      if (nowTime - preTime >= delay) {
+
+        preTime = Date.now()
+        fn.apply(_this, arg)
+      }
+    }
+  }
+</script>
+
+</html>

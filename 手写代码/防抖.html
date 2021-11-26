@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>按钮</button>
+
+  <script>
+    const btn = document.querySelector('button');
+
+
+    const btnCLick = () => {
+      console.log("@@@");
+    }
+    btn.addEventListener("click", debounce(btnCLick))
+
+
+    function debounce(fn, wait = 300) {
+      let timer
+      let _this = this;
+      // return function () {
+      //   let _this = this;
+      //   let args = arguments;
+
+      //   if (timer) {
+      //     clearTimeout(timer);
+      //   }
+      //   timer = setTimeout(function () {
+      //     fn.apply(_this, args);
+      //   }, wait);
+      // };
+
+      return function () {
+        if (timer) {
+          clearTimeout(timer);
+        }
+
+        timer = setTimeout(() => {
+          fn.apply(_this, arguments);
+          timer = null;
+        }, wait);
+      };
+    }
+  </script>
+</body>
+
+</html>
